@@ -1,9 +1,16 @@
+
 body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
   background: linear-gradient(to right, #2b5876, #4e4376);
   color: #fff;
+  transition: background 0.5s, color 0.5s;
+}
+
+.dark-mode {
+  background: #121212;
+  color: #eee;
 }
 
 header {
@@ -58,4 +65,11 @@ footer {
   padding: 1rem;
   background-color: rgba(0, 0, 0, 0.6);
   margin-top: 2rem;
+}
+
+button#toggle-theme {
+  margin-top: 10px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
 }
