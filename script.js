@@ -1,50 +1,82 @@
 document.addEventListener('DOMContentLoaded', () => {
-  // Theme toggle
+  // Theme toggle with improved logic
   const toggleBtn = document.getElementById('toggle-theme');
   const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
   
-  // Check for saved theme or preferred scheme
-  const currentTheme = localStorage.getItem('theme') || 
-                      (prefersDarkScheme.matches ? 'dark' : 'light');
-  if (currentTheme === 'dark') {
-    document.body.classList.add('dark-mode');
-    toggleBtn.textContent = 'Switch to Light Mode';
-  }
-  
-  toggleBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const theme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
-    localStorage.setItem('theme', theme);
-    
+  // Set initial theme
+  const setTheme = (theme) => {
+    document.body.classList.toggle('dark-mode', theme === 'dark');
     toggleBtn.textContent = theme === 'dark' 
       ? 'Switch to Light Mode' 
       : 'Switch to Dark Mode';
+    localStorage.setItem('theme', theme);
+  };
+
+  // Check for saved theme or preferred scheme
+  const currentTheme = localStorage.getItem('theme') || 
+                      (prefersDarkScheme.matches ? 'dark' : 'light');
+  setTheme(currentTheme);
+
+  // Theme toggle button
+  toggleBtn.addEventListener('click', () => {
+    const isDark = document.body.classList.contains('dark-mode');
+    setTheme(isDark ? 'light' : 'dark');
   });
-  
-  // Smooth scrolling for anchor links
+
+  // Enhanced smooth scrolling
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
-      document.querySelector(this.getAttribute('href')).scrollIntoView({
-        behavior: 'smooth'
+      const target = document.querySelector(this.getAttribute('href'));
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
       });
+      
+      // Add focus state for accessibility
+      setTimeout(() => {
+        target.setAttribute('tabindex', '-1');
+        target.focus();
+      }, 1000);
     });
   });
-  
-  // Add subtle animation to sections when they come into view
+
+  // Professional intersection observer with delays
   const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+    entries.forEach((entry, index) => {
       if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
+        setTimeout(() => {
+          entry.target.classList.add('section-animate');
+        }, 150 * index);
       }
     });
-  }, { threshold: 0.1 });
-  
-  document.querySelectorAll('section').forEach(section => {
-    section.style.opacity = 0;
-    section.style.transform = 'translateY(20px)';
-    section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+  }, { 
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
+  });
+
+  // Observe sections
+  document.querySelectorAll('section').forEach((section, i) => {
+    section.style.opacity = '0';
     observer.observe(section);
+  });
+
+  // Skill cards animation
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.style.transform = 'translateY(0)';
+          entry.target.style.opacity = '1';
+        }, 50 * index);
+      }
+    });
+  });
+
+  document.querySelectorAll('.skills li').forEach(skill => {
+    skill.style.transform = 'translateY(20px)';
+    skill.style.opacity = '0';
+    skill.style.transition = 'transform 0.6s var(--transition), opacity 0.6s var(--transition)';
+    skillObserver.observe(skill);
   });
 });
