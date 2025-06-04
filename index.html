@@ -3,94 +3,198 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yasir Abbas | Software & UX Developer</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <title>Yasir | Technical Support | Software | UX Developer</title>
 </head>
 <body>
+  <div class="bg-animation">
+    <div class="floating-shapes shape1"></div>
+    <div class="floating-shapes shape2"></div>
+    <div class="floating-shapes shape3"></div>
+  </div>
+
   <header>
-    <h1>Yasir Abbas</h1>
-    <p>UX Developer | Full Stack & Technical Support Engineer</p>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button id="toggle-theme" class="button-hover">Switch to Dark Mode</button>
+    <div class="header-content">
+      <h1>Yasir</h1>
+      <p class="subtitle">Full Stack Devolper & Technical Support Engineer</p>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button id="toggle-theme">🌙 Switch to Dark Mode</button>
+    </div>
   </header>
 
-  <section id="about" class="card-hover">
-    <h2>About Me</h2>
-    <p>Self-driven UX developer and technical support specialist with over 6 years of experience in web development, scripting, and system support. Passionate about creating smart, user-centered solutions and simplifying complex workflows.</p>
-  </section>
+  <div class="container">
+    <section id="about" class="fade-in">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <p>Self-driven UX developer and technical support specialist with over 6 years of experience in web development, scripting, and system support. Passionate about creating smart, user-centered solutions and simplifying complex workflows.</p>
+        <br>
+        <p>I believe in the power of clean code, intuitive design, and seamless user experiences. My journey spans across different continents and technologies, giving me a unique perspective on global software development.</p>
+      </div>
+    </section>
 
-  <section id="experience" class="card-hover">
-    <h2>Experience</h2>
-    <div class="job">
-      <h3>Operations Manager – Microplanet Technologies</h3>
-      <p><em>Beijing, Pakistan | Mar 2023 – Apr 2025</em></p>
-      <ul>
-        <li>Led daily operations and managed a distributed team in Pakistan.</li>
-        <li>Handled administrative processes with government departments.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Technical Support Engineer – Volkswagen Group China</h3>
-      <p><em>Beijing, China | Jan 2020 – Dec 2022</em></p>
-      <ul>
-        <li>Executed software deployments using SCCM and RDP.</li>
-        <li>Managed Active Directory security and user group permissions.</li>
-        <li>Handled non-standard software installation requests.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Technical Support Specialist – Think-HD</h3>
-      <p><em>Remote, USA | Jan 2018 – Dec 2019</em></p>
-      <ul>
-        <li>Scripted Python automation bots to streamline CRM sales processes.</li>
-        <li>Executed SEO strategies for the company website and social media.</li>
-        <li>Managed internal IT infrastructure and remote user support.</li>
-        <li>Oversaw and contributed to development projects involving frontend features.</li>
-      </ul>
-    </div>
-    <div class="job">
-      <h3>Web Developer – Plabesk</h3>
-      <p><em>Islamabad, Pakistan | Dec 2013 – Dec 2015</em></p>
-      <ul>
-        <li>Developed websites using WordPress, PHP, JSON, and Swift integrations.</li>
-        <li>Collaborated with design teams to implement responsive UI/UX designs.</li>
-      </ul>
-    </div>
-  </section>
+    <section id="experience" class="fade-in">
+      <h2 class="section-title">Professional Experience</h2>
+      
+      <div class="job">
+        <h3>Operations Manager</h3>
+        <p class="job-meta">Microplanet Technologies | Beijing, Pakistan | Mar 2023 – Apr 2025</p>
+        <ul>
+          <li>Led daily operations and managed a distributed team in Pakistan</li>
+          <li>Handled administrative processes with government departments</li>
+          <li>Streamlined operational workflows and improved team efficiency</li>
+        </ul>
+      </div>
 
-  <section id="skills" class="card-hover">
-    <h2>Skills</h2>
-    <ul class="skills">
-      <li>HTML / CSS / JavaScript</li>
-      <li>Python Automation</li>
-      <li>SEO & Web Analytics</li>
-      <li>WordPress & PHP</li>
-      <li>SCCM / Active Directory</li>
-      <li>CRM & Tech Support</li>
-    </ul>
-  </section>
+      <div class="job">
+        <h3>Technical Support Engineer</h3>
+        <p class="job-meta">Volkswagen Group China | Beijing, China | Jan 2020 – Dec 2022</p>
+        <ul>
+          <li>Executed software deployments using SCCM and RDP</li>
+          <li>Managed Active Directory security and user group permissions</li>
+          <li>Handled non-standard software installation requests</li>
+          <li>Maintained system security and compliance standards</li>
+        </ul>
+      </div>
 
-  <section id="contact" class="card-hover">
-    <h2>Contact</h2>
-    <p><i class="fas fa-envelope"></i> Email: yasirjutt2010@gmail.com</p>
-    <p><i class="fas fa-phone"></i> Phone: +49 157 57060135</p>
-    <p><i class="fas fa-map-marker-alt"></i> Location: Ilmenau, Germany</p>
-    <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/yasirjutt91">linkedin.com/in/yasirjutt91</a></p>
-    <p><i class="fab fa-instagram"></i> Instagram: <a href="https://instagram.com/yasirjutt91">@yasirjutt91</a></p>
-  </section>
+      <div class="job">
+        <h3>Technical Support Specialist</h3>
+        <p class="job-meta">Think-HD | Remote, USA | Jan 2018 – Dec 2019</p>
+        <ul>
+          <li>Scripted Python automation bots to streamline CRM sales processes</li>
+          <li>Executed SEO strategies for the company website and social media</li>
+          <li>Managed internal IT infrastructure and remote user support</li>
+          <li>Oversaw and contributed to development projects involving frontend features</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <h3>Web Developer</h3>
+        <p class="job-meta">Plabesk | Islamabad, Pakistan | Dec 2013 – Dec 2015</p>
+        <ul>
+          <li>Developed websites using WordPress, PHP, JSON, and Swift integrations</li>
+          <li>Collaborated with design teams to implement responsive UI/UX designs</li>
+          <li>Delivered pixel-perfect implementations of design mockups</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="fade-in">
+      <h2 class="section-title">Technical Skills</h2>
+      <ul class="skills">
+        <li class="skill-item">HTML / CSS / JavaScript</li>
+        <li class="skill-item">Python Automation</li>
+        <li class="skill-item">SEO & Web Analytics</li>
+        <li class="skill-item">WordPress & PHP</li>
+        <li class="skill-item">SCCM / Active Directory</li>
+        <li class="skill-item">CRM & Tech Support</li>
+        <li class="skill-item">UI/UX Design</li>
+        <li class="skill-item">System Administration</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="fade-in">
+      <h2 class="section-title">Let's Work Together</h2>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <span>📧</span>
+            <div>
+              <strong>Email</strong><br>
+              yasirjutt2010@gmail.com
+            </div>
+          </div>
+          <div class="contact-item">
+            <span>📱</span>
+            <div>
+              <strong>Phone</strong><br>
+              +49 157 57060135
+            </div>
+          </div>
+          <div class="contact-item">
+            <span>📍</span>
+            <div>
+              <strong>Location</strong><br>
+              Ilmenau, Germany
+            </div>
+          </div>
+          <div class="contact-item">
+            <span>💼</span>
+            <div>
+              <strong>LinkedIn</strong><br>
+              <a href="https://www.linkedin.com/in/yasirjutt91" style="color: #00d4aa;">linkedin.com/in/yasirjutt91</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <span>📷</span>
+            <div>
+              <strong>Instagram</strong><br>
+              <a href="https://instagram.com/yasirjutt91" style="color: #00d4aa;">@yasirjutt91</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <h3 style="margin-bottom: 1.5rem;">Send me a project or job offer</h3>
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form-group">
+              <label for="company">Company/Organization</label>
+              <input type="text" id="company" name="company">
+            </div>
+            
+            <div class="form-group">
+              <label for="type">Inquiry Type *</label>
+              <select id="type" name="type" required>
+                <option value="">Select an option</option>
+                <option value="job">Job Opportunity</option>
+                <option value="project">Project Collaboration</option>
+                <option value="freelance">Freelance Work</option>
+                <option value="consultation">Consultation</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="budget">Budget Range (Optional)</label>
+              <select id="budget" name="budget">
+                <option value="">Select budget range</option>
+                <option value="under-100">Under €100</option>
+                <option value="100-500">€100 - €500</option>
+                <option value="500-1k">€500 - €1,000</option>
+                <option value="1k-5k">€1,000 - €5,000</option>
+                <option value="5k-10k">€5,000 - €10,000</option>
+                <option value="10k-plus">€10,000+</option>
+                <option value="salary">Salary Position</option>
+              </select>
+            </div>
+            
+            <div class="form-group">
+              <label for="message">Project Details / Message *</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project, requirements, timeline, or job opportunity..." required></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Send Message 🚀</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 Yasir Abbas</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <p>&copy; 2025 Yasir | Crafted with ❤️ and lots of ☕</p>
+  </footer> 
 </body>
 </html>
