@@ -1,99 +1,47 @@
 :root {
-  --primary: #2563eb;
+  --primary: #1a56db;       /* Professional blue */
   --primary-dark: #1e40af;
-  --secondary: #334155;
-  --accent: #10b981;
-  --light: #f8fafc;
-  --dark: #0f172a;
-  --gray: #64748b;
-  --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-  --section-bg: rgba(255, 255, 255, 0.96);
-}
-
-.dark-mode {
-  --primary: #3b82f6;
-  --primary-dark: #2563eb;
-  --secondary: #e2e8f0;
-  --accent: #10b981;
-  --light: #020617;
-  --dark: #f8fafc;
-  --gray: #94a3b8;
-  --section-bg: rgba(15, 23, 42, 0.96);
-}
-
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
+  --secondary: #1f2937;     /* Dark gray */
+  --accent: #047857;        /* Professional green */
+  --light: #f9fafb;         /* Light gray */
+  --dark: #111827;          /* Dark gray */
+  --text-light: #374151;    /* Dark gray for light mode */
+  --text-dark: #f3f4f6;     /* Light gray for dark mode */
+  --transition: all 0.3s ease;
 }
 
 body {
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-  color: var(--dark);
+  background-color: var(--light);
+  color: var(--text-light);
   line-height: 1.6;
   transition: var(--transition);
 }
 
 .dark-mode {
-  background: linear-gradient(135deg, #0b1120 0%, #1e293b 100%);
-  color: var(--dark);
+  background-color: var(--dark);
+  color: var(--text-dark);
 }
 
 header {
   background: linear-gradient(to right, var(--primary), var(--primary-dark));
   padding: 3rem 2rem;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
   color: white;
-}
-
-header::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
-  animation: float 8s ease-in-out infinite;
-  z-index: 0;
 }
 
 header h1 {
   margin: 0;
   font-size: 2.8rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
-  position: relative;
-  z-index: 1;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header p {
   font-size: 1.2rem;
   opacity: 0.9;
   margin: 0.5rem 0 1.5rem;
-  position: relative;
-  z-index: 1;
 }
 
 nav {
@@ -101,8 +49,6 @@ nav {
   justify-content: center;
   gap: 1.5rem;
   flex-wrap: wrap;
-  position: relative;
-  z-index: 1;
   margin-bottom: 1rem;
 }
 
@@ -113,71 +59,45 @@ nav a {
   padding: 0.5rem 1.2rem;
   border-radius: 50px;
   transition: var(--transition);
-  position: relative;
   background: rgba(255, 255, 255, 0.1);
 }
 
 nav a:hover {
   background: rgba(255, 255, 255, 0.2);
-  transform: translateY(-2px);
 }
 
 section {
-  padding: 2.5rem;
+  padding: 2rem;
   max-width: 900px;
   margin: 2rem auto;
-  background: var(--section-bg);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: var(--transition);
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .dark-mode section {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  background-color: #1f2937;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1.5rem;
   color: var(--primary);
-  position: relative;
-  display: inline-block;
 }
 
 .dark-mode h2 {
   color: var(--accent);
 }
 
-h2::after {
-  content: '';
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  width: 50px;
-  height: 3px;
-  background: var(--primary);
-  border-radius: 3px;
-}
-
-.dark-mode h2::after {
-  background: var(--accent);
-}
-
 .job {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .dark-mode .job {
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-}
-
-.job:last-child {
-  border-bottom: none;
+  border-bottom-color: #374151;
 }
 
 .job h3 {
@@ -186,8 +106,12 @@ h2::after {
 }
 
 .job p em {
-  color: var(--gray);
+  color: #6b7280;
   font-size: 0.9rem;
+}
+
+.dark-mode .job p em {
+  color: #9ca3af;
 }
 
 ul.skills {
@@ -205,24 +129,10 @@ ul.skills li {
   border-radius: 8px;
   text-align: center;
   font-weight: 500;
-  transition: var(--transition);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-}
-
-ul.skills li:hover {
-  background: var(--primary-dark);
-  transform: translateY(-3px) translateY(0);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dark-mode ul.skills li {
   background: var(--accent);
-}
-
-.dark-mode ul.skills li:hover {
-  background: #0d9488;
 }
 
 footer {
@@ -243,62 +153,27 @@ button#toggle-theme {
   border: none;
   border-radius: 50px;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: var(--transition);
-  position: relative;
-  z-index: 1;
 }
 
 .dark-mode button#toggle-theme {
-  background: var(--dark);
+  background: #1f2937;
   color: white;
 }
 
 button#toggle-theme:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Contact icons */
-#contact i {
-  width: 20px;
-  text-align: center;
-  margin-right: 10px;
+#contact a {
   color: var(--primary);
+  text-decoration: none;
 }
 
-.dark-mode #contact i {
+.dark-mode #contact a {
   color: var(--accent);
 }
 
-/* Animation classes */
-.section-animate {
-  animation: fadeInUp 0.8s var(--transition) both;
-}
-
-.card-hover {
-  transition: var(--transition);
-}
-
-.card-hover:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
-}
-
-.dark-mode .card-hover:hover {
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
-}
-
-.button-hover {
-  transition: var(--transition);
-}
-
-.button-hover:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-/* Responsive adjustments */
 @media (max-width: 768px) {
   header h1 {
     font-size: 2.2rem;
@@ -311,14 +186,5 @@ button#toggle-theme:hover {
   
   ul.skills {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  }
-  
-  nav {
-    gap: 0.8rem;
-  }
-  
-  nav a {
-    padding: 0.5rem 0.8rem;
-    font-size: 0.9rem;
   }
 }
