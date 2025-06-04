@@ -10,6 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
       ? 'Switch to Light Mode' 
       : 'Switch to Dark Mode';
     localStorage.setItem('theme', theme);
+    
+    // Update meta theme color
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    if (metaTheme) {
+      metaTheme.content = theme === 'dark' ? '#0f172a' : '#f8fafc';
+    }
   };
 
   // Check for saved theme or preferred scheme
@@ -28,9 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     anchor.addEventListener('click', function(e) {
       e.preventDefault();
       const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+      
+      // Calculate offset based on header height
+      const headerOffset = 100;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
       });
       
       // Add focus state for accessibility
@@ -79,4 +91,12 @@ document.addEventListener('DOMContentLoaded', () => {
     skill.style.transition = 'transform 0.6s var(--transition), opacity 0.6s var(--transition)';
     skillObserver.observe(skill);
   });
+
+  // Add meta theme color tag if not exists
+  if (!document.querySelector('meta[name="theme-color"]')) {
+    const meta = document.createElement('meta');
+    meta.name = 'theme-color';
+    meta.content = currentTheme === 'dark' ? '#0f172a' : '#f8fafc';
+    document.head.appendChild(meta);
+  }
 });
