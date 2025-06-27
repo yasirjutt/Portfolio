@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Yasir | Technical Support | Software | UX Developer</title>
+  <title>Yasir | Full Stack Developer & Technical Support Engineer</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,14 +16,18 @@
   <header>
     <div class="header-content">
       <h1>Yasir</h1>
-      <p class="subtitle">Full Stack Devolper & Technical Support Engineer</p>
+      <p class="subtitle">Full Stack Developer & Technical Support Engineer</p>
       <nav>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
         <a href="#skills">Skills</a>
+        <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="toggle-theme">🌙 Switch to Dark Mode</button>
+      <div class="header-buttons">
+        <button id="toggle-theme">🌙 Dark Mode</button>
+        <a href="YasirBI.pdf" download class="resume-btn">📄 Download CV</a>
+      </div>
     </div>
   </header>
 
@@ -31,70 +35,158 @@
     <section id="about" class="fade-in">
       <h2 class="section-title">About Me</h2>
       <div class="about-content">
-        <p>Self-driven UX developer and technical support specialist with over 6 years of experience in web development, scripting, and system support. Passionate about creating smart, user-centered solutions and simplifying complex workflows.</p>
+        <p>Self-driven UX developer and technical support specialist with 6+ years of experience in web development, scripting, and system support. Passionate about creating smart, user-centered solutions and simplifying complex workflows.</p>
         <br>
-        <p>I believe in the power of clean code, intuitive design, and seamless user experiences. My journey spans across different continents and technologies, giving me a unique perspective on global software development.</p>
+        <p>I believe in clean code, intuitive design, and seamless user experiences. My journey across continents and technologies provides a unique global perspective on software development.</p>
       </div>
     </section>
 
     <section id="experience" class="fade-in">
       <h2 class="section-title">Professional Experience</h2>
       
-      <div class="job">
-        <h3>Operations Manager</h3>
-        <p class="job-meta">Microplanet Technologies | Beijing, Pakistan | Mar 2023 – Apr 2025</p>
-        <ul>
-          <li>Led daily operations and managed a distributed team in Pakistan</li>
-          <li>Handled administrative processes with government departments</li>
-          <li>Streamlined operational workflows and improved team efficiency</li>
-        </ul>
-      </div>
+      <div class="timeline">
+        <div class="job">
+          <div class="job-header">
+            <h3>Operations Manager</h3>
+            <span class="job-date">Mar 2023 – Apr 2025</span>
+          </div>
+          <p class="job-meta">Microplanet Technologies | Beijing, Pakistan</p>
+          <ul>
+            <li>Led daily operations and managed distributed team in Pakistan</li>
+            <li>Handled administrative processes with government departments</li>
+            <li>Streamlined operational workflows and improved team efficiency</li>
+          </ul>
+        </div>
 
-      <div class="job">
-        <h3>Technical Support Engineer</h3>
-        <p class="job-meta">Volkswagen Group China | Beijing, China | Jan 2020 – Dec 2022</p>
-        <ul>
-          <li>Executed software deployments using SCCM and RDP</li>
-          <li>Managed Active Directory security and user group permissions</li>
-          <li>Handled non-standard software installation requests</li>
-          <li>Maintained system security and compliance standards</li>
-        </ul>
-      </div>
+        <div class="job">
+          <div class="job-header">
+            <h3>Technical Support Engineer</h3>
+            <span class="job-date">Jan 2020 – Dec 2022</span>
+          </div>
+          <p class="job-meta">Volkswagen Group China | Beijing, China</p>
+          <ul>
+            <li>Executed software deployments using SCCM and RDP</li>
+            <li>Managed Active Directory security and user group permissions</li>
+            <li>Handled non-standard software installation requests</li>
+            <li>Maintained system security and compliance standards</li>
+          </ul>
+        </div>
 
-      <div class="job">
-        <h3>Technical Support Specialist</h3>
-        <p class="job-meta">Think-HD | Remote, USA | Jan 2018 – Dec 2019</p>
-        <ul>
-          <li>Scripted Python automation bots to streamline CRM sales processes</li>
-          <li>Executed SEO strategies for the company website and social media</li>
-          <li>Managed internal IT infrastructure and remote user support</li>
-          <li>Oversaw and contributed to development projects involving frontend features</li>
-        </ul>
-      </div>
+        <div class="job">
+          <div class="job-header">
+            <h3>Technical Support Specialist</h3>
+            <span class="job-date">Jan 2018 – Dec 2019</span>
+          </div>
+          <p class="job-meta">Think-HD | Remote, USA</p>
+          <ul>
+            <li>Scripted Python automation bots to streamline CRM sales processes</li>
+            <li>Executed SEO strategies for company website and social media</li>
+            <li>Managed internal IT infrastructure and remote user support</li>
+            <li>Oversaw development projects involving frontend features</li>
+          </ul>
+        </div>
 
-      <div class="job">
-        <h3>Web Developer</h3>
-        <p class="job-meta">Plabesk | Islamabad, Pakistan | Dec 2013 – Dec 2015</p>
-        <ul>
-          <li>Developed websites using WordPress, PHP, JSON, and Swift integrations</li>
-          <li>Collaborated with design teams to implement responsive UI/UX designs</li>
-          <li>Delivered pixel-perfect implementations of design mockups</li>
-        </ul>
+        <div class="job">
+          <div class="job-header">
+            <h3>Network Administrator</h3>
+            <span class="job-date">2016 – 2017</span>
+          </div>
+          <p class="job-meta">Nees Technologies | Islamabad, Pakistan</p>
+          <ul>
+            <li>Maintained LAN networks, routers and devices</li>
+            <li>Provided Tier 1/2 technical support</li>
+            <li>Managed network infrastructure and security</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-header">
+            <h3>Web Developer</h3>
+            <span class="job-date">Dec 2013 – Dec 2015</span>
+          </div>
+          <p class="job-meta">Plabesk | Islamabad, Pakistan</p>
+          <ul>
+            <li>Developed websites using WordPress, PHP, JSON, and Swift</li>
+            <li>Collaborated with design teams on responsive UI/UX</li>
+            <li>Implemented pixel-perfect design mockups</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <section id="skills" class="fade-in">
       <h2 class="section-title">Technical Skills</h2>
-      <ul class="skills">
-        <li class="skill-item">HTML / CSS / JavaScript</li>
-        <li class="skill-item">Python Automation</li>
-        <li class="skill-item">SEO & Web Analytics</li>
-        <li class="skill-item">WordPress & PHP</li>
-        <li class="skill-item">SCCM / Active Directory</li>
-        <li class="skill-item">CRM & Tech Support</li>
-        <li class="skill-item">UI/UX Design</li>
-        <li class="skill-item">System Administration</li>
-      </ul>
+      <div class="skills-matrix">
+        <div class="skill-category">
+          <h3><span>💻</span> Development</h3>
+          <ul class="skills">
+            <li class="skill-item">
+              <div class="skill-name">HTML/CSS/JavaScript</div>
+              <div class="skill-bar"><span style="width: 90%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Python Automation</div>
+              <div class="skill-bar"><span style="width: 85%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">WordPress & PHP</div>
+              <div class="skill-bar"><span style="width: 80%"></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span>🔧</span> IT Operations</h3>
+          <ul class="skills">
+            <li class="skill-item">
+              <div class="skill-name">SCCM / Active Directory</div>
+              <div class="skill-bar"><span style="width: 92%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">System Administration</div>
+              <div class="skill-bar"><span style="width: 88%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">Windows/Linux/macOS</div>
+              <div class="skill-bar"><span style="width: 85%"></span></div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="skill-category">
+          <h3><span>📊</span> Business & Design</h3>
+          <ul class="skills">
+            <li class="skill-item">
+              <div class="skill-name">UI/UX Design</div>
+              <div class="skill-bar"><span style="width: 82%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">SEO & Web Analytics</div>
+              <div class="skill-bar"><span style="width: 78%"></span></div>
+            </li>
+            <li class="skill-item">
+              <div class="skill-name">CRM & Tech Support</div>
+              <div class="skill-bar"><span style="width: 90%"></span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="certifications" class="fade-in">
+      <h2 class="section-title">Certifications</h2>
+      <div class="certs-grid">
+        <div class="cert-card">
+          <div class="cert-icon">📜</div>
+          <h3>Google IT Support Professional</h3>
+          <p>2023-2024</p>
+        </div>
+        <div class="cert-card">
+          <div class="cert-icon">📊</div>
+          <h3>Google Project Management</h3>
+          <p>2024</p>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="fade-in">
@@ -126,20 +218,20 @@
             <span>💼</span>
             <div>
               <strong>LinkedIn</strong><br>
-              <a href="https://www.linkedin.com/in/yasirjutt91" style="color: #00d4aa;">linkedin.com/in/yasirjutt91</a>
+              <a href="https://www.linkedin.com/in/yasirjutt91">linkedin.com/in/yasirjutt91</a>
             </div>
           </div>
           <div class="contact-item">
             <span>📷</span>
             <div>
               <strong>Instagram</strong><br>
-              <a href="https://instagram.com/yasirjutt91" style="color: #00d4aa;">@yasirjutt91</a>
+              <a href="https://instagram.com/yasirjutt91">@yasirjutt91</a>
             </div>
           </div>
         </div>
 
         <div class="contact-form">
-          <h3 style="margin-bottom: 1.5rem;">Send me a project or job offer</h3>
+          <h3>Send me a project or job offer</h3>
           <form id="contact-form">
             <div class="form-group">
               <label for="name">Full Name *</label>
@@ -165,20 +257,6 @@
                 <option value="freelance">Freelance Work</option>
                 <option value="consultation">Consultation</option>
                 <option value="other">Other</option>
-              </select>
-            </div>
-            
-            <div class="form-group">
-              <label for="budget">Budget Range (Optional)</label>
-              <select id="budget" name="budget">
-                <option value="">Select budget range</option>
-                <option value="under-100">Under €100</option>
-                <option value="100-500">€100 - €500</option>
-                <option value="500-1k">€500 - €1,000</option>
-                <option value="1k-5k">€1,000 - €5,000</option>
-                <option value="5k-10k">€5,000 - €10,000</option>
-                <option value="10k-plus">€10,000+</option>
-                <option value="salary">Salary Position</option>
               </select>
             </div>
             
