@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yasir | Full Stack Developer</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <style>
     /* Modern color scheme with improved light mode */
     :root {
@@ -909,6 +909,14 @@
       .timeline-item:nth-child(even) .timeline-content::before {
         left: -60px;
       }
+    }
+    /* All previous CSS remains unchanged */
+
+    /* Fallback for X logo */
+    .fa-x-twitter::before {
+        content: "X";
+        font-weight: 900;
+        font-family: sans-serif;
     }
 
     @media (max-width: 768px) {
